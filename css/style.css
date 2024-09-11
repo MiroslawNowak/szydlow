@@ -1,0 +1,234 @@
+/* Ogólne style dla całej strony */
+html, body {
+    height: 100%
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Ustaw kolumnowy układ */
+    min-height: 100vh; /* Zabezpieczenie na wysokość viewportu */
+    font-family: 'Times New Roman', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f8; /* Jasne, neutralne tło */
+    color: #333; /* Tekst w ciemnoszarym kolorze */
+}
+
+/* Styl nagłówka */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Wyrównanie pionowe do środka */
+    background: #ffffff;
+    color: #4a4a4a;
+    padding: 30px 0;
+    border-bottom: 4px solid #b0b3b8;
+    font-family: "Times New Roman";
+}
+
+header div {
+    text-align: center;
+    display: inline-block;
+}
+
+header h1 {
+    align-items: center;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header img {
+    height: 8em; /* Dopasowanie do h1 */
+    vertical-align: middle;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* Styl nawigacji */
+nav {
+    background-color: #e9ecef; /* Jasnoszary kolor nawigacji */
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #483D8B; /* Neutralny, ciemnoszary kolor linków */
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #b0b3b8; /* Delikatny szary na hover */
+    color: #ffffff;
+}
+
+/* Styl sekcji głównej */
+main {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+main section {
+    text-align: center;
+}
+
+main h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4a4a4a; /* Ciemnoszary kolor nagłówków */
+}
+
+main h3 {
+    color: #00008B
+}
+
+main p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Styl przycisku */
+button {
+    background-color: #4a4a4a; /* Ciemnoszary kolor przycisku */
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6c757d; /* Subtelny odcień szarości na hover */
+}
+
+/* Styl stopki */
+footer {
+    background-color: #e9ecef;
+    color: #555;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    font-size: 0.9em;
+}
+
+/* Styl smukłej linii */
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+}
+
+/* Stylizacja dla tekstu wyjustowanego */
+.justify-aligned-text {
+    text-align: justify;
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Stylizacja dla tekstu wyrównanego do lewej */
+.left-aligned-text {
+    text-align: left;
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Stylizacja dla tekstu wyrównanego do środka */
+.center-aligned-text {
+    text-align: center;
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Styl dla zdjęć w treści */
+.gallery-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0; /* Margines góra-dół dla oddzielenia zdjęcia od tekstu */
+    border-radius: 10px; /* Opcjonalnie, zaokrąglenie rogów */
+    cursor: pointer; /* Wskaźnik ręki, aby wskazać, że obrazki są klikalne */
+}
+
+/* Styl dla modala */
+.modal {
+    display: none; /* Ukrywa modal domyślnie */
+    position: fixed; /* Pozostaje na miejscu podczas przewijania */
+    z-index: 1; /* Wyświetlanie na wierzchu */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Dodaje przewijanie, jeśli zdjęcie jest większe niż ekran */
+    background-color: rgba(0,0,0,0.8); /* Ciemne tło z przezroczystością */
+}
+
+/* Styl dla zawartości modala */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 5%;
+}
+
+/* Styl dla zamknięcia modala */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styl dla opisu zdjęcia w modalu */
+#caption {
+    margin: 10px;
+    color: #fff;
+    text-align: center;
+}
