@@ -21,7 +21,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center; /* Wyrównanie pionowe do środka */
-    background: #ffffff;
+    background: #f2fafc;
     color: #4a4a4a;
     padding: 30px 0;
     border-bottom: 4px solid #b0b3b8;
@@ -44,6 +44,15 @@ header img {
     vertical-align: middle;
     margin-left: 30px;
     margin-right: 30px;
+}
+
+header div img {
+    height: 20px;
+    align-items: center;
+}
+
+p a {
+    text-decoration:none;
 }
 
 /* Styl nawigacji */
